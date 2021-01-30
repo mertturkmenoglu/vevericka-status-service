@@ -2,10 +2,15 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const routes = require('./routes/routes');
+const morgan = require('morgan');
+const cors = require('cors');
 
 dotenv.config();
 
 app.use(express.json());
+app.use(morgan('[:date[web]] || :method :url  || Status: :status || Response time: :response-time ms'));
+app.use(cors());
+
 
 app.get('/', (req, res) => {
 	return res.status(200).json({

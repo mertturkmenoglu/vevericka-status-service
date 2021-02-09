@@ -7,7 +7,7 @@ class VeverickaAuthService extends AbstractService {
 		super(
 			"Vevericka Auth Service",
 			"https://vevericka-auth-service.herokuapp.com/",
-			"https://vevericka-auth-service.herokuapp.com/api"
+			"https://vevericka-auth-service.herokuapp.com/services"
 		);
 	}
 
